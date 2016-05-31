@@ -1,6 +1,29 @@
-.bgimage {
+.jumbotron {
   background-image: url('../images/wind_1.png');
   background-position: center center;
   background-size: cover;
   height: 500px;
+
+  /*margin-top: -22px;*/
+  margin-top: -10px;
+}
+/*
+.about {
+  float:right;
+}*/
+
+
+.img-thumbnail {
+  max-width: 350px;
+  margin: 0 auto;
+  display: block;
+}
+
+
+.nav-tabs {
+  /*margin-left: 100px;*/
+}
+
+.navbar {
+  /*height: 100px;*/
 }

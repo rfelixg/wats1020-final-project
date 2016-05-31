@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/main.css">
 
+  <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
   <title>The Wind Rises - WATS1020 Final Project</title>
 </head>
 
@@ -19,51 +21,392 @@
 
 <body>
 
-  <header class="bgimage">
-    <div class="container">
-      <h1>The Wind Rises</h1>
-    </div>
-  </header>
+  <!-- navbar -->
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src="images/studio.gif" width=120 height=33></a>
+      </div>
 
+      <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2"> -->
+      <div class="collapse navbar-collapse" id="navbar-collapse-2">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#home">Home</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a class="js-link-scroll" data-toggle="tab" href="#about">About the Film</a></li>
+              <li><a class="js-link-scroll" data-toggle="tab"  href="#plot">Plot</a></li>
+              <li><a class="js-link-scroll" data-toggle="tab"  href="#ghibli">Studio Ghibli</a></li>
+              <li><a class="js-link-scroll" data-toggle="tab"  href="#images">Images</a></li>
+            </ul>
+          </li>
+          <li><a href="#plot">Plot</a></li>
+          <li><a href="#links">Links</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- header -->
+  <div class="jumbotron">
+    <div class="container">
+      <header>
+        <h1>The Wind Rises</h1>
+      </header>
+    </div>
+  </div>
+
+  <!-- critics -->
   <div class="critics container">
     <div class="row">
 
-    <!-- <div id="critics-1"> -->
-    <div class="col-sm-4 col-md-4 col-lg-4" id="quote">
-    <h3>"GORGEOUS!"</h3>
-    <p>"Like an animated children's version of an Hitchcock or Roman Polanski thriller set on the rooftops of Paris."<br> - New York Times</p>
-  </div>
-  <!-- </div> -->
+      <!-- <div id="critics-1"> -->
+      <div class="col-sm-4 col-md-4 col-lg-4" id="quote">
+        <h3>"GORGEOUS!"</h3>
+        <p>
+          "The film, like the wind it references, has wonderfully soaring sequences"<br> - USA Today
+        </p>
+      </div>
+      <!-- </div> -->
 
-  <!-- <div id="critics-2"> -->
-    <div class="col-sm-4 col-md-4 col-lg-4" id="quote">
-    <h3>"WONDERFUL, SOPHISTICATED FUN!"</h3>
-      <p>"- San Francisco Chronicle"</p>
-  </div>
-<!-- </div> -->
+      <!-- <div id="critics-2"> -->
+      <div class="col-sm-4 col-md-4 col-lg-4" id="quote">
+        <h3>"WONDERFUL, SOPHISTICATED FUN!"</h3>
+        <p>
+          "- San Francisco Chronicle"
+        </p>
+      </div>
+      <!-- </div> -->
 
-  <!-- <div id="critics-3"> -->
-    <div class="col-sm-4 col-md-4 col-lg-4" id="quote">
-    <h3>"SUBLIME! BREATHTAKING!"</h3>
-    <p>""Rich with film references (Reservoir Dogs and Goodfellas among them). A cat in Paris is a stylish celebration of storytelling!"<br> - Boston Globe"</p>
-  </div>
-  <!-- </div> -->
-</div>
-</div>
-
-  <div class="about container">
-    <!-- <div class="row"> -->
-      <!-- <div class="col-md-4 col-lg-10"> -->
-    <h3>The Wind Rises</h3>
-    <h4>A Studio Gibli Film from Academy Award Winner Hayao Miyazaki</h4>
-    <p>A Cat in Paris (Une vie de chat) is a 2010 French animated adventure/crime film by the French animation studio Folimage, telling the story of a young Parisian girl whose cat leads her to unravel a thrilling mystery over the course of a single evening. The film was directed by Alain Gagnol and Jean-Loup Felicioli.</p>
-    <p>The film was nominated for the Academy Award for Best Animated Feature. Along with Chico and Rita, it became one of two foreign-language films nominated for Best Animated Feature in one year, an Academy first that many observers considered a surprise.[4] The film has also received a nomination for the Cesar Award for Best Animated Film in 2011.</p>
+      <!-- <div id="critics-3"> -->
+      <div class="col-sm-4 col-md-4 col-lg-4" id="quote">
+        <h3>"SUBLIME! BREATHTAKING!"</h3>
+        <p>
+          "Rich with film references (Reservoir Dogs and Goodfellas among them). A cat in Paris is a stylish celebration of storytelling!"<br> - Boston Globe"
+        </p>
+      </div>
+      <!-- </div> -->
+    </div>
   </div>
 
+  <!-- Nav Tabs -->
+  <div class="container">
+    <ul class="nav nav-tabs" id="tabs" role="tablist">
+      <li role="presentation" class="active"><a class="about" href="#about" aria-controls="about" role="tab" data-toggle="tab"><span class area-hidden="true"></span>About</a></li>
+      <li role="presentation"><a href="#plot" aria-controls="plot" role="tab" data-toggle="tab"><span class area-hidden="true"></span>Plot</a></li>
+      <li role="presentation"><a href="#vote" aria-controls="vote" role="tab" data-toggle="tab"><span class aria-hidden="true"></span>Vote</a></li>
+      <li role="presentation"><a href="#images" aria-controls="images" role="tab" data-toggle="tab"><span class aria-hidden="true"></span>Images</a></li>
+      <li role="presentation"><a href="#newsletter" aria-controls="newsletter" role="tab" data-toggle="tab"><span class aria-hidden="true"></span>Newsletter</a></li>
+      <li role="presentation"><a href="#ghibli" aria-controls="Studio Ghibli" role="tab" data-toggle="tab"><span class aria-hidden="true"></span>Studio Ghibli</a></li>
+    </ul>
+    <!-- </div> -->
+
+    <!-- Tab panes -->
+    <div class="tab-content" id="my-tab-content">
+      <!-- <div role="tabpanel" class="tab-pane active" id="about"> -->
+      <div role="tablpanel" class="tab-pane fade in active" id="about">
+        <section class="col-md-4 col-lg-6">
+          <h3>The Wind Rises</h3>
+          <h4>A Studio Gibli Film from Academy Award Winner Hayao Miyazaki</h4>
+          <p>
+            The Wind Rises is a 2013 Japanese animated historical drama film written and directed by Hayao Miyazaki and animated by Studio Ghibli. It was released by Toho on July 20, 2013 in Japan, and by Touchstone Pictures in North America on February 21, 2014.[6][7]
+          </p>
+
+          <p>
+            The Wind Rises is a fictionalized biopic of Jiro Horikoshi, designer of the Mitsubishi A5M fighter aircraft and its successor, the Mitsubishi A6M Zero, used by the Empire of Japan during World War II. The film is adapted from Miyazaki's manga of the same name, which was in turn loosely based on the 1937 short story The Wind Has Risen by Tatsuo Hori.[8] It was the final film directed by Miyazaki before his retirement in September 2013.[9]
+          </p>
+
+          <p>
+            The Wind Rises was the highest-grossing Japanese film in Japan in 2013 and received widespread critical acclaim. It won and was nominated for several awards, including nominations for the Academy Award for Best Animated Feature, the Golden Globe Award for Best Foreign Language Film, and the Japan Academy Prize for Animation of the Year.
+          </p>
+        </section>
+
+        <section class="col-md-4 thumbnail" id="trailer">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/jGr8XDxB-9I" frameborder="0" allowfullscreen></iframe>
+        </section>
+      </div>
+
+      <div role="tabpanel" class="tab-pane fade" id="plot">
+        <h2>Plot</h2>
+        <p>
+          In 1918, the young Jiro Horikoshi longs to become a pilot, but his nearsightedness prevents it. He reads about the famous Italian aircraft designer Giovanni Battista Caproni, and dreams about him that night. In the dream, Caproni tells him that he has never flown a plane in his life, and that building planes is better than flying them.
+        </p>
+
+        <p>
+          Five years later, Jiro is traveling by train to study aeronautical engineering at Tokyo Imperial University and meets a young girl, Naoko, traveling with her maid. When the Great Kanto Earthquake of 1923 hits, Naoko's maid breaks her leg and Jiro carries her to Naoko's family. He leaves without giving his name.
+        </p>
+
+        <p>
+          In 1927, Jiro graduates with his friend Kiro Honjo (who later designs the Mitsubishi G3M), and both begin work at aircraft manufacturer Mitsubishi assigned to design a fighter plane, the Falcon, for the Imperial Army. During tests, the Falcon breaks apart in mid-air and the Army rejects it. Dispirited about the seeming backwardness of Japanese technology, Jiro and Honjo are sent to Germany in 1929 to carry out technical research and obtain a production license for a Junkers G.38 aircraft. Jiro sees Hugo Junkers, argues with German guards and encounters Nazi thugs. He dreams again of Caproni, who tells him that the world is better for the beauty of planes, even if humankind might put them to ugly purposes.
+        </p>
+
+        <p>
+          In the spring of 1932, Jiro is promoted to chief designer for a fighter plane competition sponsored by the Imperial Navy, but his design, the Mitsubishi 1MF10, fails testing in 1933 and is rejected. Disappointed, Jiro goes to a summer resort in Karuizawa to rest, where he meets Naoko again. They become engaged, but Naoko has tuberculosis and refuses to marry until she recovers. Castorp, a German visitor privately critical of the Nazi regime, assists the romance before fleeing arrest by the Japanese secret police.
+        </p>
+
+        <p>
+          Wanted in connection with Castorp, Jiro hides at his supervisor's home while he works on a new navy project. Following a lung hemorrhage, Naoko recuperates in an alpine sanatorium but cannot bear being apart from Jiro, and returns to marry him. Jiro's sister Kayo, a doctor, warns Jiro that his marriage to Naoko will end badly as tuberculosis is incurable. Though Naoko's health deteriorates, she and Jiro enjoy their time together.
+        </p>
+
+        <p>
+          Jiro leaves for the test flight of his new prototype aircraft, the Mitsubishi A5M. Knowing that she will die soon, Naoko secretly leaves letters for Jiro, her family, and friends and returns to the sanatorium. At the test site, Jiro is distracted from his success by a gust of wind, sensing Naoko's death.
+        </p>
+
+        <p>
+          In the summer of 1945, Japan has lost World War II and has been devastated by air raids. Jiro again dreams of meeting Caproni, telling him he regrets his aircraft were used for war. A group of Zeros fly past and their pilots salute Jiro. Caproni comforts him, saying Jiro's dream of building beautiful aircraft was nonetheless realized. Naoko appears, exhorting her husband to live his life to the fullest.
+        </p>
+      </div>
+
+      <div role="tabpanel" class="tab-pane" id="ghibli">
+        <h2>Studio Ghibli History</h2>
+        <p>
+          Founded on June 15, 1985, the studio is headed by the directors Hayao Miyazaki and Isao Takahata and the producer Toshio Suzuki. Prior to the formation of the studio, Miyazaki and Takahata had already had long careers in Japanese film and television animation and had worked together on Hols: Prince of the Sun and Panda! Go, Panda!; and Suzuki was an editor at Tokuma Shoten's Animage manga magazine.
+        </p>
+
+        <p>
+          The studio was founded after the success of the 1984 film Nausicaä of the Valley of the Wind, written and directed by Miyazaki for Topcraft and distributed by Toei Company. The origins of the film lie in the first two volumes of a serialized manga written by Miyazaki for publication in Animage as a way of generating interest in an anime version.[5][6] Suzuki was part of the production team on the film and founded Studio Ghibli with Miyazaki, who also invited Takahata to join the new studio.
+        </p>
+
+        <p>
+          The studio has mainly produced films by Miyazaki, with the second most prolific director being Takahata (most notably with Grave of the Fireflies). Other directors who have worked with Studio Ghibli include Yoshifumi Kondo, Hiroyuki Morita, Gorō Miyazaki, and Hiromasa Yonebayashi. Composer Joe Hisaishi has provided the soundtracks for most of Miyazaki's Studio Ghibli films. In their book Anime Classics Zettai!, Brian Camp and Julie Davis made note of Michiyo Yasuda as "a mainstay of Studio Ghibli’s extraordinary design and production team".[7] At one time the studio was based in Kichijōji, Musashino, Tokyo.[8]
+        </p>
+
+        <p>
+          In August 1996, Disney and Tokuma Shoten Publishing agreed that Disney would distribute internationally Tokuma's Studio Ghibli animated films.[9]
+        </p>
+
+        <p>
+          Many of Ghibli's films in Japan are theatrically distributed by Toho while home video releases are handled by Walt Disney Studios Home Entertainment Japan.[10] Wild Bunch holds the international sales rights to many of Ghibli's films.[11] Ghibli's main international distribution partners also include Disney (Japan Home Video, Taiwan, North America, France),[10][11] GKIDS (North America),[12] StudioCanal UK, and Madman Entertainment (Australia).
+        </p>
+
+        <p>
+          Over the years, there has been a close relationship between Studio Ghibli and the magazine Animage, which regularly runs exclusive articles on the studio and its members in a section titled "Ghibli Notes." Artwork from Ghibli's films and other works are frequently featured on the cover of the magazine. Between 1999 and 2005 Studio Ghibli was a subsidiary of Tokuma Shoten, the publisher of Animage.
+        </p>
+
+        <p>
+          In October 2001, the Ghibli Museum opened in Mitaka, Tokyo.[13] It contains exhibits based on Studio Ghibli films and shows animations, including a number of short Studio Ghibli films not available elsewhere.
+        </p>
+
+        <p>
+          The studio is also known for its strict "no-edits" policy in licensing their films abroad due to Nausicaä of the Valley of Wind being heavily edited for the film's release in the United States as Warriors of the Wind. The "no cuts" policy was highlighted when Miramax co-chairman Harvey Weinstein suggested editing Princess Mononoke to make it more marketable. A Studio Ghibli producer is rumoured to have sent an authentic Japanese sword with a simple message: "No cuts".[14]
+        </p>
+
+        <p>
+          On February 1, 2008, Toshio Suzuki stepped down from the position of Studio Ghibli president, which he had held since 2005, and Koji Hoshino (former president of Walt Disney Japan) took over. Suzuki said he wanted to improve films with his own hands as a producer, rather than demanding this from his employees. Suzuki decided to hand over the presidency to Hoshino because Hoshino has helped Studio Ghibli to sell its videos since 1996, also helping to release the Princess Mononoke film in the United States.[15] Suzuki still serves on the company's board of directors.
+        </p>
+
+        <p>
+          Two Studio Ghibli short films created for the Ghibli Museum were shown at the Carnegie Hall Citywise Japan NYC Festival: "House Hunting" and "Mon Mon the Water Spider" were screened on March 26, 2011.[16]
+        </p>
+
+        <p>
+          Takahata developed a project for release after Gorō Miyazaki's (director of Tales from Earthsea and Hayao's son) From Up on Poppy Hill – an adaptation of The Tale of the Bamboo Cutter. The last film Hayao Miyazaki directed before retiring from feature films was The Wind Rises which is about the Mitsubishi A6M Zero and its founder.[17]
+        </p>
+
+        <p>
+          On Sunday, September 1, 2013, Hayao Miyazaki held a press conference in Venice to confirm his retirement, saying: "I know I've said I would retire many times in the past. Many of you must think, 'Once again.' But this time I am quite serious."[18]
+        </p>
+
+        <p>
+          On January 31, 2014, it was announced that Gorō Miyazaki will direct his first anime TV series, Sanzoku no Musume Rōnya, an adaptation of Astrid Lindgren's Ronia the Robber's Daughter for NHK. The series is computer-animated, produced by Polygon Pictures, and co-produced by Studio Ghibli.[19][20]
+        </p>
+
+        <p>
+          In March 2014, Toshio Suzuki retired as a producer and assumed a new position of general manager. Yoshiaki Nishimura replaced Suzuki in the producer role.[21]
+        </p>
+
+        <p>
+          On August 3, 2014, Toshio Suzuki announced that Studio Ghibli would take a "brief pause" to re-evaluate and restructure in the wake of Miyazaki's retirement. He stated some concerns about where the company would go in the future.[22] This has led to speculation that Studio Ghibli will never produce another feature film again. On November 7, 2014, Miyazaki stated, "That was not my intention, though. All I did was announce that I would be retiring and not making any more features."[23]
+        </p>
+      </div>
+
+      <div role="tabpanel" class="tab-pane" id="vote">
+        <h2>Vote</h2>
+        <p> Placeholder Content </p>
+      </div>
+
+      <div role="tabpanel" class="tab-pane" id="images">
+        <h2>Images</h2>
+        <p> Placeholder Content </p>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- <div class="images container">
+  <h2>Images</h2>
+  <div class="row">
+  <section class="col-xs-4">
+  <img class="icon" src="images/wr_1.jpg" alt="">
+  <h3>Image 1</h3>
+  <p> image 1 information </p>
+</section>
+
+<section class="col-xs-4">
+<img class="icon" src="images/wr_2.jpg" alt="">
+<h3>imag 2</h3>
+<p> We offer specialized care for reptiles, rodents, birds, and other exotic pets. </p>
+</section> -->
+
+  <div class="services container">
+    <h4>Press Images</h4>
+    <div class="row">
+      <section class="col-md-4">
+        <!-- <img class="icon" src="images/icon-health.svg" alt="Icon"> -->
+        <img class="img-thumbnail" src="images/wr_1.jpg" alt="Icon"> <br>
+        <!-- <h3>General Health</h3> -->
+        <!-- <p>Wellness and senior exams, ultrasound, x-ray, and dental cleanings are just a few of our general health services.</p> -->
+      </section>
+
+      <section class="col-md-4">
+        <!-- <img class="icon" src="images/icon-exoticpets.svg" alt="Icon"> -->
+        <img class="img-thumbnail" src="images/wr_2.jpg" alt="Icon"> <br>
+        <!-- <h3>Exotic Pets</h3> -->
+        <!-- <p>We offer specialized care for reptiles, rodents, birds, and other exotic pets.</p> -->
+      </section>
+
+      <section class="col-md-4">
+        <!-- <img class="icon" src="images/icon-grooming.svg" alt="Icon"> -->
+        <img class="img-thumbnail" src="images/wr_3.jpg" alt="Icon"> <br>
+        <!-- <h3>Grooming</h3> -->
+        <!-- <p>Our therapeutic grooming treatments help battle fleas, allergic dermatitis, and other challenging skin conditions.</p> -->
+      </section>
+
+    </div> <!-- row -->
+  </div> <!-- content container -->
+
+  <div class="image container">
+    <!-- <h4>Press Images</h4> -->
+    <div class="row">
+      <section class="col-md-4 ">
+        <!-- <img class="icon" src="images/icon-nutrition.svg" alt="Icon"> -->
+        <img class="img-thumbnail" src="images/wr_4.jpg" alt="Icon"> <br>
+
+        <!-- <h3>Nutrition</h3> -->
+        <!-- <p>Let our nutrition experts review your pet's diet and prescribe a custom nutrition plan for optimum health and disease prevention.</p> -->
+      </section>
+
+      <section class="col-md-4">
+        <!-- <img class="icon" src="images/icon-pestcontrol.svg" alt="Icon"> -->
+        <img class="img-thumbnail" src="images/wr_5.jpg" alt="Icon"> <br>
+        <!-- <h3>Pest Control</h3> -->
+        <!-- <p>We offer the latest advances in safe and effective prevention and treatment of fleas, ticks, worms, heart worm, and other parasites.</p> -->
+      </section>
+
+      <section class="col-md-4">
+        <!-- <img class="icon" src="images/icon-vaccinations.svg" alt="Icon"> -->
+        <img class="img-thumbnail" src="images/wr_6.jpg" alt="Icon"> <br>
+        <!-- <h3>Vaccinations</h3> -->
+        <!-- <p>Our veterinarians are experienced in modern vaccination protocols that prevent many of the deadliest diseases in pets.</p> -->
+      </section>
+
+    </div><!-- row -->
+  </div>
+  <!-- content container -->
+
+  <!-- vote -->
+  <hr>
+  <div class="container voting">
+    <h2>Vote</h2>
+    <p class="lead">Tell us your facorite recent Studio Ghibli film!</p>
+    <div class="voting-buttons text-center">
+      <button class="btn btn-primary btn-lg vote" data-vote="great">Howl's Moving Castle</button>
+      <button class="btn btn-primary btn-lg vote" data-vote="greatest">Spirited Away</button>
+    </div>
+    <h3 class="text-primary">Results</h3>
+    <div class="progress">
+      <div class="progress-bar progress-bar-info great-progress" style="width: 10%">Howl's Moving Castle</div>
+    </div>
+    <div class="progress">
+      <div class="progress-bar progress-bar-success greatest-progress" style="width: 30%">Spirited Away</div>
+    </div>
+  </div>
+  <hr>
+  <!-- /vote -->
+
+  <!-- newsletter -->
+  <div class="container">
+    <p class="lead">Sign-up for the Studio Ghibli Newsletter to get the latest news and for a chance to win exclusive Studio Ghibli merchandise!</p>
+    <form class="form-horizontal" role="form" action="thank-you.html" method="get" id="order-form">
+
+      <fieldset>
+        <legend></legend>
+        <div class="form-group required">
+          <label class="col-sm-3 control-label" for="your-name"><span class="glyphicon glyphicon-question-sign" title="Your first and last name."></span> Your Name</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" name="your-name" id="your-name" placeholder="Your Name" required>
+          </div>
+
+        </div>
+        <div class="form-group required">
+          <label class="col-sm-3 control-label" for="your-email">Email</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" name="your-email" id="your-email" placeholder="Your Email" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-3 control-label" for="your-address2">Street Address (additional)</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" name="your-address2" id="your-address2" placeholder="Your Street Address" required>
+          </div>
+        </div>
+        <div class="form-group required">
+          <label class="col-sm-3 control-label" for="your-city">City</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" name="your-city" id="your-city" placeholder="Your City" requried>
+          </div>
+        </div>
+
+        <div class="form-group required">
+          <label class="col-sm-3 control-label" for="your-state"><span class="glyphicon glyphicon-question-sign" title="Two-letter state abbreviation."></span> State</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" name="your-state" id="your-state" placeholder="Your State" requried>
+          </div>
+        </div>
+        <div class="form-group required">
+          <label class="col-sm-3 control-label" for="your-zip"><span class="glyphicon glyphicon-question-sign" title="US ZIP code only."></span> ZIP</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" name="your-zip" id="your-zip" placeholder="Your ZIP Code" required>
+          </div>
+        </div>
+
+        <!-- /newsletter -->
+
+        <!-- submit button -->
+        <div class="form-group">
+          <div class="col-sm-offset-3 col-sm-9">
+            <button type="submit" class="btn btn-success"> <span class="glyphicon glyphicon-shopping-cart"></span>Submit</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+  <div class="container">
+    <hr>
+    <!-- /submitt button -->
+
+<!-- scripts -->
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
 <!-- Minified JavaScript (bootstrap JavaScript code)-->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script>src="js/main.js"</script>
+<!-- <script src="js/vendor/bootstrap.min.js"></script> -->
+
+<script src="js/main.js"</script>
+
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
+<script src="js/vendor/jquery.validate.min.js"></script>
+<!-- /scripts -->
+
 </body>
 </html>
