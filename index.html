@@ -23,32 +23,35 @@
 
   <!-- navbar -->
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
+    <div class="navbar-inner"> <!-- <div class="container-fluid"> -->
+      <div class="container-fluid" style="background:white;">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#"><img src="images/studio.gif" width=120 height=33></a>
+        <a class="navbar-brand" href="#"><img src="images/studio.gif" width=150 height=50></a>
       </div>
 
       <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2"> -->
-      <div class="collapse navbar-collapse" id="navbar-collapse-2">
+      <div class="collapse navbar-collapse" id="navbar-collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#home">Home</a></li>
+          <!-- <li class="active"><a href="#home">Home</a></li> -->
+          <li class="link"><a href="#home">Home</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li><a class="js-link-scroll" data-toggle="tab" href="#about">About the Film</a></li>
+              <li><a class="js-link-scroll" data-toggle="tab" href="#about">About the Movie</a></li>
               <li><a class="js-link-scroll" data-toggle="tab"  href="#plot">Plot</a></li>
               <li><a class="js-link-scroll" data-toggle="tab"  href="#ghibli">Studio Ghibli</a></li>
               <li><a class="js-link-scroll" data-toggle="tab"  href="#images">Images</a></li>
             </ul>
           </li>
-          <li><a href="#plot">Plot</a></li>
-          <li><a href="#links">Links</a></li>
+          <!-- <li><a href="#plot">Plot</a></li> -->
+          <!-- <li><a href="#links">Links</a></li> -->
         </ul>
       </div>
     </div>
@@ -101,9 +104,9 @@
     <ul class="nav nav-tabs" id="tabs" role="tablist">
       <li role="presentation" class="active"><a class="about" href="#about" aria-controls="about" role="tab" data-toggle="tab"><span class area-hidden="true"></span>About</a></li>
       <li role="presentation"><a href="#plot" aria-controls="plot" role="tab" data-toggle="tab"><span class area-hidden="true"></span>Plot</a></li>
-      <li role="presentation"><a href="#vote" aria-controls="vote" role="tab" data-toggle="tab"><span class aria-hidden="true"></span>Vote</a></li>
+      <!-- <li role="presentation"><a href="#vote" aria-controls="vote" role="tab" data-toggle="tab"><span class aria-hidden="true"></span>Vote</a></li> -->
       <li role="presentation"><a href="#images" aria-controls="images" role="tab" data-toggle="tab"><span class aria-hidden="true"></span>Images</a></li>
-      <li role="presentation"><a href="#newsletter" aria-controls="newsletter" role="tab" data-toggle="tab"><span class aria-hidden="true"></span>Newsletter</a></li>
+      <!-- <li role="presentation"><a href="#newsletter" aria-controls="newsletter" role="tab" data-toggle="tab"><span class aria-hidden="true"></span>Newsletter</a></li> -->
       <li role="presentation"><a href="#ghibli" aria-controls="Studio Ghibli" role="tab" data-toggle="tab"><span class aria-hidden="true"></span>Studio Ghibli</a></li>
     </ul>
     <!-- </div> -->
@@ -240,35 +243,24 @@
     </div>
   </div>
 
-
-  <!-- <div class="images container">
-  <h2>Images</h2>
-  <div class="row">
-  <section class="col-xs-4">
-  <img class="icon" src="images/wr_1.jpg" alt="">
-  <h3>Image 1</h3>
-  <p> image 1 information </p>
-</section>
-
-<section class="col-xs-4">
-<img class="icon" src="images/wr_2.jpg" alt="">
-<h3>imag 2</h3>
-<p> We offer specialized care for reptiles, rodents, birds, and other exotic pets. </p>
-</section> -->
-
-  <div class="services container">
+  <!-- images -->
+  <div class="images container">
     <h4>Press Images</h4>
     <div class="row">
       <section class="col-md-4">
-        <!-- <img class="icon" src="images/icon-health.svg" alt="Icon"> -->
-        <img class="img-thumbnail" src="images/wr_1.jpg" alt="Icon"> <br>
-        <!-- <h3>General Health</h3> -->
-        <!-- <p>Wellness and senior exams, ultrasound, x-ray, and dental cleanings are just a few of our general health services.</p> -->
+        <a href="#" class="pop">
+          <img class="img-thumbnail" id="imageresource" src="images/wr_1.jpg" alt="Icon"> <br>
+          <!-- Click to Enlarge -->
+        </a>
       </section>
 
       <section class="col-md-4">
         <!-- <img class="icon" src="images/icon-exoticpets.svg" alt="Icon"> -->
-        <img class="img-thumbnail" src="images/wr_2.jpg" alt="Icon"> <br>
+        <a href="#" class="pop">
+          <img class="img-thumbnail" id="imageresource" src="images/wr_2.jpg" alt="Icon"> <br>
+          <!-- Click to Enlarge -->
+        </a>
+        <!-- <img class="img-thumbnail" src="images/wr_2.jpg" alt="Icon"> <br> -->
         <!-- <h3>Exotic Pets</h3> -->
         <!-- <p>We offer specialized care for reptiles, rodents, birds, and other exotic pets.</p> -->
       </section>
@@ -310,24 +302,55 @@
 
     </div><!-- row -->
   </div>
-  <!-- content container -->
+
+  <!-- bootstrap modal -->
+  <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title" id="myModalLabel">Image preview</h4>
+        </div>
+        <div class="modal-body">
+          <img src="" id="imagepreview" style="width: 400px; height: 264px;" >
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+  <!-- /images -->
 
   <!-- vote -->
   <hr>
   <div class="container voting">
     <h2>Vote</h2>
-    <p class="lead">Tell us your facorite recent Studio Ghibli film!</p>
+    <p class="lead">What is your facorite Studio Ghibli film?</p>
     <div class="voting-buttons text-center">
       <button class="btn btn-primary btn-lg vote" data-vote="great">Howl's Moving Castle</button>
       <button class="btn btn-primary btn-lg vote" data-vote="greatest">Spirited Away</button>
+      <button class="btn btn-primary btn-lg vote" data-vote="best">My Neighbor Totoro</button>
     </div>
     <h3 class="text-primary">Results</h3>
     <div class="progress">
-      <div class="progress-bar progress-bar-info great-progress" style="width: 10%">Howl's Moving Castle</div>
+      <div class="progress-bar progress-bar-info great-progress" style="width: 0%">Howl's Moving Castle</div>
     </div>
     <div class="progress">
-      <div class="progress-bar progress-bar-success greatest-progress" style="width: 30%">Spirited Away</div>
+      <div class="progress-bar progress-bar-success greatest-progress" style="width: 0%">Spirited Away</div>
     </div>
+    <div class="progress">
+      <div class="progress-bar progress-bar-success best-progress" style="width: 0%">My Neighbor Totoro</div>
+    </div>
+    <p>
+      <span class="boxGreat"></span>
+      <span class="boxGreatest"><t></span>
+      <span class="boxBest"><t></span>
+      <span class="boxTotal"><t></span>
+    </p>
   </div>
   <hr>
   <!-- /vote -->
@@ -378,21 +401,31 @@
             <input type="text" class="form-control" name="your-zip" id="your-zip" placeholder="Your ZIP Code" required>
           </div>
         </div>
+      </div>
 
         <!-- /newsletter -->
 
         <!-- submit button -->
         <div class="form-group">
           <div class="col-sm-offset-3 col-sm-9">
-            <button type="submit" class="btn btn-success"> <span class="glyphicon glyphicon-shopping-cart"></span>Submit</button>
+            <button type="submit" class="btn btn-success"> <span class="glyphicon glyphicon-submit"></span>Submit</button>
           </div>
         </div>
       </fieldset>
     </form>
-  </div>
+  <!-- </div>
   <div class="container">
-    <hr>
+    <hr> -->
     <!-- /submitt button -->
+
+
+    <div class="container-fluid">
+    <footer class="footer">
+      <!-- <div class="container-fluid"> -->
+        <p class="text-muted">Rafael Felix</p>
+      <!-- </div> -->
+    </footer>
+    </div>
 
 <!-- scripts -->
 <!-- jQuery -->

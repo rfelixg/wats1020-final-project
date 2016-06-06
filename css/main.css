@@ -1,3 +1,11 @@
+body {
+  /*padding-top: 60px;*/
+  padding-bottom: 30px;
+}
+
+p.text-muted {
+  padding-top: 50px;
+}
 .jumbotron {
   background-image: url('../images/wind_1.png');
   background-position: center center;
@@ -5,13 +13,12 @@
   height: 500px;
 
   /*margin-top: -22px;*/
-  margin-top: -10px;
+  margin-top: 80px;
 }
 /*
 .about {
   float:right;
 }*/
-
 
 .img-thumbnail {
   max-width: 350px;
@@ -19,11 +26,63 @@
   display: block;
 }
 
-
 .nav-tabs {
   /*margin-left: 100px;*/
 }
 
 .navbar {
   /*height: 100px;*/
+}
+
+.navbar-brand {
+  /*margin-top: 50px;*/
+}
+
+.navbar-nav {
+  height: 70px;
+  margin-top: 10px;
+}
+/*<ul class="nav navbar-nav" style="height:90px; margin-top: 50px;">*/
+
+.btn-success {
+  background-color: black;
+}
+
+.btn-primary {
+  background-color: black;
+}
+
+.btn-primary:hover {
+    background-color: black;
+}
+
+.nav-tabs{
+  /*background-color:#161616;*/
+}
+.tab-content{
+    /*background-color:#303136;*/
+    /*color:#fff;*/
+    /*padding:5px*/
+}
+.nav-tabs > li > a{
+  /*border: medium none;*/
+  color: black;
+}
+/*.nav-tabs > li > a:hover{
+  background-color: #303136 !important;
+    border: medium none;
+    border-radius: 0;
+    color:#fff;
+}*/
+
+h3.text-primary {
+  color: black;
+}
+
+div.progress-bar {
+  color: black;
+}
+
+div.progress-bar.progress-bar-info {
+  /*color: red;*/
 }

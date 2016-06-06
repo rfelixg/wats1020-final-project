@@ -3,53 +3,57 @@ $( document ).ready(function() {
         firstName: 'Jane',
         lastName: 'Doe'
     };
+
     var voteCounts = {
         great: 0,
         greatest: 0,
+        best: 0,
         total: 0
     };
 
-// $('#login-form .btn').on('click', function(event){
-//     $('#login-form').hide();
-//     $('.user-info').show();
-//     $('span.user-fullname').text(userInfo.firstName + ' ' + userInfo.lastName);
-// });
-
-// view-detaisl
-// $('.view-details').on('click', function(event){
-//     console.log(event);
-//     var targetElement = event.target;
-//     var container = targetElement.parentElement.parentElement;
-//     $(container).find('.details').each(function(index, el){
-//         if ($(el).is(':visible')){
-//             $(el).fadeOut();
-//             targetElement.innerText = "View Details"
-//         } else {
-//             $(el).fadeIn();
-//             targetElement.innerText = "Hide Details"
-//         }
-//     });
-// });
-
-// voting
-$('.voting button').on('click', function(event){
-    if($(this).attr('data-vote') === 'great'){
-        ++voteCounts.great;
-    } else {
-        ++voteCounts.greatest;
-    }
-
-    ++voteCounts.total;
-    console.log(voteCounts);
-
-    var greatPercent = (voteCounts.great/voteCounts.total*100)+'%';
-    console.log(greatPercent);
-    var greatestPercent = (voteCounts.greatest/voteCounts.total*100)+'%';
-
-    $('.great-progress').attr('style', 'width: ' + greatPercent);
-    $('.greatest-progress').attr('style', 'width: ' + greatestPercent);
+// enlarge image --> work-in-progress ********************************************************
+$(".pop").on("click", function() {
+   $('#imagepreview').attr('src', $('#imageresource').attr('src'));
+   $('#imagemodal').modal('show');
 });
 
+// voting
+$('.vote').on('click', function(event){
+    console.log(event);
+    if ($(this).attr('data-vote')==="great"){
+        voteCounts.great++;
+        voteCounts.total++;
+    }else{
+        if ($(this).attr('data-vote')==="greatest"){
+            voteCounts.greatest++;
+            voteCounts.total++;
+        }else{
+          if ($(this).attr('data-vote')==="best"){
+            voteCounts.best++;
+            voteCounts.total++;
+          }
+        }
+    }
+
+console.log("gr "+ voteCounts.great);
+console.log("Greatest" + voteCounts.greatest);
+console.log("Best" + voteCounts.best);
+console.log("total" + voteCounts.total);
+
+var greatPercent = voteCounts.great / voteCounts.total * 100 + '%';
+var greatestPercent = voteCounts.greatest / voteCounts.total * 100 + '%';
+var bestPercent = voteCounts.best / voteCounts.total * 100 + '%';
+$('.great-progress').css('width', greatPercent);
+$('.greatest-progress').css('width', greatestPercent);
+$('.best-progress').css('width', bestPercent);
+console.log(greatPercent);
+console.log(greatestPercent);
+console.log(bestPercent);
+$('.boxGreat').html("Number of votes for Great are: " + voteCounts.great + "&nbsp;&nbsp;&nbsp;&nbsp;");
+$('.boxGreatest').html("Number of votes for Greatest of all time are: " + voteCounts.greatest + "&nbsp;&nbsp;&nbsp;&nbsp;");
+$('.boxBest').html("Number of votes for Best of all time are: " + voteCounts.best + "&nbsp;&nbsp;&nbsp;&nbsp;");
+$('.boxTotal').html("The total number of votes is: " + voteCounts.total + "&nbsp;");
+});
 
 // active tab + smooth scroll
 $('a.js-link-scroll').on('shown.bs.tab', function (e) {
@@ -60,7 +64,6 @@ $('a.js-link-scroll').on('shown.bs.tab', function (e) {
         scrollTop: $( $(that).attr('href') ).offset().top
       }, 800);
 });
-
 
 // validation
 $('#order-form').validate({
@@ -92,6 +95,5 @@ $('#order-form').validate({
     }
   }
 });
-
 
 });
