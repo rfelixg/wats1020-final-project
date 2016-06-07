@@ -1,8 +1,4 @@
 $( document ).ready(function() {
-    var userInfo = {
-        firstName: 'Jane',
-        lastName: 'Doe'
-    };
 
     var voteCounts = {
         great: 0,
